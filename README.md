@@ -1,10 +1,18 @@
 Here I have listed few projects which I solely did in JIPL_RNC. 
-1-HTML+CSS Pages only-1- Accenture Payslip Page
-                      2- HVF Invoice Page
-                      3- Certificate Page
-                      4- Bookmarks Page
-                      5- RGB Boxes Page
-                      6- Car Page
+
+1-HTML+CSS Pages only-   
+                         
+                         1- Accenture Payslip Page
+
+                         2- HVF Invoice Page
+
+                         3- Certificate Page
+
+                         4- Bookmarks Page
+
+                         5- RGB Boxes Page
+
+                         6- Car Page
 
 2-HTML+CSS+JS Pages only-8- Salary Slip
                          9- Adding Names to an Array and Displaying it 
