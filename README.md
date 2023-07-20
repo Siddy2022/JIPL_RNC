@@ -10,9 +10,11 @@ Here I have listed few projects which I solely did in JIPL_RNC.
 
                          4- Bookmarks Page
 
-                         5- RGB Boxes Page
+                         5- Navigation Pages
+                         
+                         6- RGB Boxes Page
 
-                         6- Car Page
+                         7- Car Page
 
 2-HTML+CSS+JS Pages only-8- Salary Slip
                          9- Adding Names to an Array and Displaying it 
