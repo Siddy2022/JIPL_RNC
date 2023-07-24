@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pop-up Window</title>
+<style>
+#popup {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  margin: 0 0 10px 0;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000000;
+}
+</style>
+</head>
+<body>
+
+<div id="popup">
+  <h2>Add Contact</h2>
+  <input type="text" id="name" placeholder="Name">
+  <input type="text" id="contact" placeholder="Contact">
+  <input type="text" id="address" placeholder="Address">
+  <button id="save">Save</button>
+  <button id="close">Close</button>
+</div>
+
+<script>
+var popup = document.getElementById("popup");
+var name = document.getElementById("name");
+var contact = document.getElementById("contact");
+var address = document.getElementById("address");
+var save = document.getElementById("save");
+var close = document.getElementById("close");
+
+save.addEventListener("click", function() {
+  var data = {
+    name: name.value,
+    contact: contact.value,
+    address: address.value
+  };
+
+  // Save the data to the table list in the background.
+  // ...
+
+  // Close the pop-up window.
+  popup.style.display = "none";
+});
+
+close.addEventListener("click", function() {
+  // Close the pop-up window.
+  popup.style.display = "none";
+});
+</script>
+
+</body>
+</html>
