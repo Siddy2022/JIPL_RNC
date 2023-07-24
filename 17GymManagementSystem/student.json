@@ -1,0 +1,160 @@
+{
+  "student": [
+    {
+      "name": "arun kr",
+      "height": "4",
+      "weight": "6",
+      "fee": "300",
+      "address1": "rnc",
+      "contact1": "123123123",
+      "id": 1
+    },
+    {
+      "name": "arun",
+      "height": "180cm",
+      "weight": "60kg",
+      "fee": "5000",
+      "address1": "ranchi",
+      "contact1": "1234567890",
+      "id": 7
+    }
+  ],
+  "money": [
+    {
+      "mr": "1",
+      "date": "2023-05-26",
+      "Sel": "anu",
+      "address": "chenai",
+      "contact": "3000",
+      "amount": "3000",
+      "month": "july",
+      "id": 1
+    },
+    {
+      "mr": "2",
+      "date": "2023-05-19",
+      "Sel": "deepak",
+      "address": "kolkata",
+      "contact": "657646536",
+      "amount": "2000",
+      "month": "november",
+      "id": 2
+    },
+    {
+      "mr": "4",
+      "date": "2023-05-20",
+      "Sel": "anu",
+      "address": "kolkata",
+      "contact": "3000",
+      "amount": "3000",
+      "month": "august",
+      "id": 6
+    }
+  ],
+  "fee": [
+    {
+      "date2": "2023-05-18",
+      "date3": "2023-05-19",
+      "Sel3": "arun",
+      "amounts": "3000",
+      "id": 1
+    },
+    {
+      "date2": "2023-05-20",
+      "date3": "2023-05-22",
+      "Sel3": "anu",
+      "amounts": "2000",
+      "id": 2
+    },
+    {
+      "date2": "2023-05-29",
+      "Sel3": "deepak",
+      "amounts": "2000",
+      "id": 3
+    },
+    {
+      "date2": "",
+      "Sel3": "anu",
+      "id": 4
+    }
+  ],
+  "sdata": [
+    {
+      "name": "arun",
+      "email": "arun7549kumar@gmail.com",
+      "password": "0000",
+      "rpassword": "0000",
+      "id": 1
+    },
+    {
+      "name": "shubh",
+      "email": "xyz@gmail.com",
+      "password": "12345",
+      "rpassword": "12345",
+      "id": 2
+    },
+    {
+      "name": "arun",
+      "email": "arun@gmail.com",
+      "password": "123",
+      "rpassword": "123",
+      "id": 3
+    },
+    {
+      "name": "arun",
+      "email": "xyz@gmail.com",
+      "password": "123",
+      "rpassword": "123",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 5
+    },
+    {
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "password": "8888",
+      "rpassword": "8888",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 8
+    },
+    {
+      "name": "arun",
+      "email": "xyz@gmail.com",
+      "password": "",
+      "rpassword": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "rpassword": "",
+      "id": 10
+    },
+    {
+      "name": "viru",
+      "email": "viru@gmail.com",
+      "password": "999999",
+      "rpassword": "999999",
+      "id": 11
+    }
+  ]
+}
