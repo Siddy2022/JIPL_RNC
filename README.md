@@ -16,7 +16,9 @@ Here I have listed few projects which I solely did in JIPL_RNC.
 
                          7- Car Page
 
-2-HTML+CSS+JS Pages only-8- Salary Slip
+2-HTML+CSS+JS Pages only-
+                         
+                         8- Salary Slip
                          9- Adding Names to an Array and Displaying it 
                          10- Train Information Citywise
                          11- Collapsible Task
@@ -24,11 +26,15 @@ Here I have listed few projects which I solely did in JIPL_RNC.
                          13- Add+Edit+Delete to a Table with Popup JS Task
                          14- Local Storage Task
 
-3-HTML+CSS+JS+JSON+AJAX+JQUERY - 15- JSON Example
+3-HTML+CSS+JS+JSON+AJAX+JQUERY - 
+
+                                 15- JSON Example
                                  16- Gym Management System
                                  17- Hostel Management System
 
-4-Reference Codes in HTML+CSS+JS - 1- Places Page
+4-Reference Codes in HTML+CSS+JS - 
+
+                                   1- Places Page
                                    2- Student Record Page
                                    3- Array Project 
                                    4- Sum of Marks
