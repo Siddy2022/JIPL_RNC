@@ -1,0 +1,327 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+    /* Same CSS as before */
+
+.collapsible.active {
+  background-color: #ccc;
+}
+
+#dataList {
+  list-style-type: none;
+  padding: 0;
+}
+
+	</style>
+</head>
+<body>
+       <div class="menu">
+  <button class="collapsible">Menu</button>
+  <div class="content">
+    <form id="myForm">
+      <input type="text" id="textInput" placeholder="Enter data" />
+      <button type="button" id="saveBtn">Save</button>
+    </form>
+    <button type="button" id="showDataBtn">Show Data</button>
+    <ul id="dataList"></ul>
+  </div>
+</div>
+
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  var saveBtn = document.getElementById("saveBtn");
+  var showDataBtn = document.getElementById("showDataBtn");
+  var dataList = document.getElementById("dataList");
+
+  saveBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    var textInput = document.getElementById("textInput");
+    var inputData = textInput.value;
+    var listItem = document.createElement("li");
+    listItem.textContent = inputData;
+    dataList.appendChild(listItem);
+    textInput.value = "";
+  });
+
+  showDataBtn.addEventListener("click", function() {
+    var dataItems = dataList.getElementsByTagName("li");
+    if (dataItems.length === 0) {
+      alert("No data to show!");
+    } else {
+      var dataString = "";
+      for (var i = 0; i < dataItems.length; i++) {
+        dataString += dataItems[i].textContent + "\n";
+      }
+      alert(dataString);
+    }
+  });
+});
+	
+
+</script>
+
+ 
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+      .container {
+                   display: flex;
+                 }
+
+      .menu {
+              flex: 1;
+              margin-right: 10px;
+            }
+
+      .collapsible {
+             background-color: #eee;
+             color: #333;
+             cursor: pointer;
+             padding: 18px;
+             width: 100%;
+             border: none;
+             text-align: left;
+             outline: none;
+             transition: background-color 0.3s;
+                 }
+
+      .collapsible:after {
+            content: '\25BC'; /* Down arrow */
+            float: right;
+         }
+
+.collapsible.active:after {
+  content: '\25B2'; /* Up arrow */
+}
+
+.content {
+  display: none;
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+table {
+  flex: 1;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+  <div class="menu">
+    <button class="collapsible">Menu</button>
+    <div class="content">
+      <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Name" />
+        <input type="text" id="addressInput" placeholder="Address" />
+        <input type="text" id="contactInput" placeholder="Contact" />
+        <button type="button" id="saveBtn">Save</button>
+      </form>
+    </div>
+  </div>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Sl No</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="dataBody"></tbody>
+  </table>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  var saveBtn = document.getElementById("saveBtn");
+  var showBtn = document.getElementById("showBtn");
+  var dataTable = document.getElementById("dataTable");
+  var dataBody = document.getElementById("dataBody");
+  var slNo = 1;
+
+  saveBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    var nameInput = document.getElementById("nameInput");
+    var addressInput = document.getElementById("addressInput");
+    var contactInput = document.getElementById("contactInput");
+
+    var newRow = dataBody.insertRow();
+    var slNoCell = newRow.insertCell(0);
+    var nameCell = newRow.insertCell(1);
+    var addressCell = newRow.insertCell(2);
+    var contactCell = newRow.insertCell(3);
+    var actionsCell = newRow.insertCell(4);
+
+    slNoCell.textContent = slNo++;
+    nameCell.textContent = nameInput.value;
+    addressCell.textContent = addressInput.value;
+    contactCell.textContent = contactInput.value;
+    actionsCell.innerHTML = '<button class="editBtn">Edit</button><button class="deleteBtn">Delete</button>';
+
+    nameInput.value = "";
+    addressInput.value = "";
+    contactInput.value = "";
+
+    attachEditDeleteListeners();
+  });
+
+  showBtn.addEventListener("click", function() {
+    var rows = dataBody.getElementsByTagName("tr");
+    if (rows.length === 0) {
+      alert("No data to show!");
+    } else {
+      var dataString = "Sl No\tName\tAddress\tContact\n";
+      for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName("td");
+        var slNo = cells[0].textContent;
+        var name = cells[1].textContent;
+        var address = cells[2].textContent;
+        var contact = cells[3].textContent;
+        dataString += slNo + "\t" + name + "\t" + address + "\t" + contact + "\n";
+      }
+      alert(dataString);
+    }
+  });
+
+  function attachEditDeleteListeners() {
+    
+
+          // Get all the edit buttons
+      var editButtons = document.getElementsByClassName("editBtn");
+      for (var i = 0; i < editButtons.length; i++) {
+        editButtons[i].addEventListener("click", function () {
+          var row = this.parentNode.parentNode;
+          var cells = row.getElementsByTagName("td");
+          var name = cells[1].textContent;
+          var address = cells[2].textContent;
+          var contact = cells[3].textContent;
+
+          // Fill the form fields with the row data
+          document.getElementById("nameInput").value = name;
+          document.getElementById("addressInput").value = address;
+          document.getElementById("contactInput").value = contact;
+
+          // Remove the row from the table
+          row.parentNode.removeChild(row);
+        });
+      }
+
+      // Get all the delete buttons
+      var deleteButtons = document.getElementsByClassName("deleteBtn");
+      for (var i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener("click", function () {
+          var row = this.parentNode.parentNode;
+          row.parentNode.removeChild(row);
+        });
+      }
+    }
+
+    // Attach event listeners for edit and delete buttons when the page loads
+    attachEditDeleteListeners();
+  });
+
+
+</script>
+
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

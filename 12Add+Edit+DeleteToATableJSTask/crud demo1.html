@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    form {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h2>User Management</h2>
+
+  <form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name">
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" placeholder="Enter contact information">
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" placeholder="Enter address">
+
+    <button type="button" onclick="addUser()">Add</button>
+  </form>
+
+  <table id="userTable">
+    <tr>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+  </table>
+
+  <script>
+    var users = [];
+
+    function addUser() {
+      var name = document.getElementById("name").value;
+      var contact = document.getElementById("contact").value;
+      var address = document.getElementById("address").value;
+
+      var user = {
+        name: name,
+        contact: contact,
+        address: address
+      };
+
+      users.push(user);
+
+      renderTable();
+      clearForm();
+    }
+
+    function renderTable() {
+      var table = document.getElementById("userTable");
+
+      // Clear existing table rows
+      while (table.rows.length > 1) {
+        table.deleteRow(1);
+      }
+
+      // Add new rows based on user data
+      for (var i = 0; i < users.length; i++) {
+        var user = users[i];
+
+        var row = table.insertRow(i + 1);
+
+        var nameCell = row.insertCell(0);
+        nameCell.innerHTML = user.name;
+
+        var contactCell = row.insertCell(1);
+        contactCell.innerHTML = user.contact;
+
+        var addressCell = row.insertCell(2);
+        addressCell.innerHTML = user.address;
+
+        var actionsCell = row.insertCell(3);
+        var editButton = document.createElement("button");
+        editButton.innerHTML = "Edit";
+        editButton.onclick = function() {
+          editUser(i);
+        };
+        actionsCell.appendChild(editButton);
+
+        var deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "Delete";
+        deleteButton.onclick = function() {
+          deleteUser(i);
+        };
+        actionsCell.appendChild(deleteButton);
+      }
+    }
+
+    function editUser(index) {
+      var user = users[index];
+
+      document.getElementById("name").value = user.name;
+      document.getElementById("contact").value = user.contact;
+      document.getElementById("address").value = user.address;
+    }
+
+    function deleteUser(index) {
+      users.splice(index, 1);
+      render

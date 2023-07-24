@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collapsible Panel</title>
+  <style>
+    .collapsible {
+      background-color: #f5f5f5;
+      color: #333;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: #fff;
+    }
+
+    .list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .list-item {
+      margin-bottom: 10px;
+    }
+
+    .list-item span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <button class="collapsible">Click to expand</button>
+  <div class="content">
+    <ul class="list">
+      <li class="list-item">
+        <span>Name:</span> John Doe
+      </li>
+      <li class="list-item">
+        <span>Address:</span> 123 Main St, City, Country
+      </li>
+      <li class="list-item">
+        <span>Contact:</span> johndoe@example.com
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    var collapsibleBtn = document.querySelector('.collapsible');
+    var contentDiv = document.querySelector('.content');
+
+    collapsibleBtn.addEventListener('click', function() {
+      contentDiv.classList.toggle('active');
+      if (contentDiv.style.maxHeight) {
+        contentDiv.style.maxHeight = null;
+      } else {
+        contentDiv.style.maxHeight = contentDiv.scrollHeight + 'px';
+      }
+    });
+  </script>
+</body>
+</html>

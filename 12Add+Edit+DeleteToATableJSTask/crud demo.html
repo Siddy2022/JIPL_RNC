@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+  .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+</style>
+
+</head>
+<body>
+  <button class="collapsible">User Information</button>
+  <div class="content">
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="contact">Contact:</label>
+      <input type="text" id="contact" name="contact" placeholder="Enter your contact information">
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" placeholder="Enter your address">
+
+      <button type="button" onclick="showUserInfo()">Show</button>
+    </form>
+  </div>
+
+  <script>
+    function showUserInfo() {
+  var name = document.getElementById("name").value;
+  var contact = document.getElementById("contact").value;
+  var address = document.getElementById("address").value;
+
+  console.log("Name: " + name);
+  console.log("Contact: " + contact);
+  console.log("Address: " + address);
+}
+
+  </script>
+</body>
+</html>
