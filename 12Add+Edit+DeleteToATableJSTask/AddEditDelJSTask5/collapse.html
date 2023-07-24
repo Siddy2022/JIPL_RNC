@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="hide()">Hide</button>
+        <div id="a">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem veritatis eveniet quod ad dolorum quaerat odio, inventore molestias possimus repellendus.
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    function hide(){
+        let i=document.getElementById("a");
+        
+        if(i.style.display==="block"){
+            i.style.display="none"
+        }else
+            i.style.display="block"
+    }
+</script>
+</html>

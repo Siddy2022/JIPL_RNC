@@ -1,0 +1,114 @@
+/* .container {
+  display: flex;
+} */
+
+/* .add {
+  /* flex: 1;
+  margin-right: 10px;
+} */
+ 
+
+/* .edit,
+.delete {
+  margin-right: 10px;
+  width: 40%;
+} */
+
+
+#slInput {
+  width: 60%;
+  float: left;
+}
+
+.showBtn {
+  float: right;
+  border-top: solid;
+}
+
+
+.collapsible {
+  background-color: #eee;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.collapsible:after {
+  content: "\25BC"; /* Down arrow */
+  float: right;
+}
+
+.collapsible.active:after {
+  content: "\25B2"; /* Up arrow */
+}
+
+.content {
+  display: none;
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  width: 60%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #0096ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0096ff;
+}
+
+table {
+  width: 99%;
+  border-collapse: collapse;
+  float: right;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #0096ff;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.main{
+  width: 100%;
+  display: flex;
+}
+
+.one{
+width: 40%;
+}
+
+.two{
+width: 60%;
+}

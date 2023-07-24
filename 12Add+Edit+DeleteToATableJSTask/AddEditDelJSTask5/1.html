@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Shrink Div Task in Js</title>
+
+    <style>
+        .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 30%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          
+        }
+        
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+        
+        .collapsible:after {
+          content: '\21e9';
+          color: white;
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+        }
+        
+        .active:after {
+          content: "\21e7";
+        }
+        
+        .content {
+          padding: 0 18px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          background-color: #f1f1f1; 
+
+         }
+         
+         
+         #input-area {
+        margin-bottom: 2rem;
+      }
+      
+      #item-list {
+        margin-bottom: 1.1rem;
+      }
+      
+      input[type="text"] {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+      
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        opacity: 0.90;
+        outline: 1px solid rgb(45, 161, 2);
+        transition: opacity 1s ease 0s;
+      }
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      li {
+        margin: 3px 0px;
+        font-size: 16px;
+        width: 210px;
+        padding: 5px 20px;
+        text-align: start;
+        border: 1px solid rgba(166, 185, 222, 0.4);
+      }
+         
+
+
+</style>
+        
+</head>
+<body>
+    
+
+<div class="container">
+   <div class="left">
+   <button class="collapsible">Add</button>
+   <div class="content">
+      <br>
+      <label for="sl">SL:</label>
+      <input type="text" id="sl-input" name="SL" />
+      <button onclick="displayData()">Show</button>
+      <br>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name-input" name="Name" />
+      <br>
+      <br>
+      <label for="address">Address:</label>
+      <input type="text" id="address-input" name="Address" />
+      <br>
+      <br>
+      <label for="distance">Contact:</label>
+      <input type="text" id="contact-input" name="contact"/>
+      <br>
+      <br>
+      <button onclick="addData()">Save</button>
+</div>
+<br>
+
+<button class="collapsible">Edit</button>
+<div class="content">
+    <br>
+    
+    <label for="sl">SL:</label>
+      <input type="text" id="sl-input" name="SL" />
+      <button onclick="displayData()">Show</button>
+      <br>
+      <br>
+    
+    <label for="name">Name:</label>
+      <input type="text" id="name-input" name="Name" />
+
+      <br /><br />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address-input" name="Address" />
+
+      <br /><br />
+
+      <label for="distance">Contact:</label>
+      <input type="text" id="contact-input" name="contact"/>
+
+      <br /><br />
+      <button onclick="">Save</button>
+  
+</div>
+<br>
+
+
+<button class="collapsible">Delete</button>
+<div class="content">
+    <br>
+
+    <label for="sl">SL:</label>
+      <input type="text" id="sl-input1" name="SL" />
+      <button onclick="displayData()">Show</button>
+      <br>
+      <br>
+     
+    <div id ="input-area">      
+        <label for="name">Name:</label>
+        <input type="text" id="name-input2" name="Name" />
+     
+      <br /><br />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address-input3" name="Address" />
+
+      <br /><br />
+
+      <label for="distance">Contact:</label>
+      <input type="text" id="contact-input4" name="contact"/>
+
+      <br /><br />
+      <button onclick="">Save</button>
+
+    </div>
+</div>
+</div>
+</div>
+       <div class="right">
+            <div id="list">
+                <div>
+                    <table style="width:40%">
+                        <caption>List...</caption>
+                        <tr style="background-color: Mediumseagreen">
+                           <th>S.no</th>
+                           <th>Name</th>
+                           <th>Address</th>
+                           <th>Country</th>
+                        </tr>
+                    
+                        <div id="item-list">
+                                <ul id="sl-list"></ul>
+                                <ul id="name-list"></ul>
+                                <ul id="address-list"></ul>
+                                <ul id="contact-list"></ul>
+                        </div>
+                     </table>              
+                
+                </div>
+                
+                <div>
+            
+
+</div>
+ </div>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+
+// it can also be done by document line
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+//initialise empty arrays to store names address and contact
+let sl = [];
+let names = []; 
+let address = [];
+let contact = [];
+
+function addData() {
+  
+  const e = document.getElementById("sl-input")
+  const f = document.getElementById("name-input")
+  const g = document.getElementById("address-input")
+  const h = document.getElementById("contact-input"), // get the input box element
+
+ t = e.value; // get input value
+ u = f.value;
+ w = g.value;
+ x = h.value;
+
+  sl.push(t),
+  names.push(u),
+  address.push(w),
+  contact.push(x),
+   
+  (e.value = ""),
+  (f.value = ""),
+  (g.value = ""),
+  (h.value = ""), // clear input box
+  displayData(); // update list of names
+}
+  function displayData() 
+  {
+    const e = document.getElementById("sl-list"); // get the list element
+    const f = document.getElementById("name-list");
+    const g = document.getElementById("address-list");
+    const h = document.getElementById("contact-list");
+
+    e.innerHTML = ""; // clear the list
+    f.innerHTML = "";
+    g.innerHTML = "";
+    h.innerHTML = "";
+
+    const t = document.createElement("ul");
+
+
+    for (let n = 0; n < sl.length; n++) 
+    {
+       const i = document.createElement("li"); // create a new list element
+       (i.textContent = sl[n]), //1-set the text content of the list item to the serial number
+       t.appendChild(i);  //2-add the list item to the list
+     }
+       e.appendChild(t);
+
+       for (let n = 0; n < names.length; n++) 
+    {
+       const i = document.createElement("li"); // create a new list element
+       (i.textContent = names[n]), //1-set the text content of the list item to the name
+       t.appendChild(i);  //2-add the list item to the list
+     }
+       f.appendChild(t);
+
+       for (let n = 0; n < address.length; n++) 
+    {
+       const i = document.createElement("li"); // create a new list element
+       (i.textContent = address[n]), //1-set the text content of the list item to the address
+       t.appendChild(i);  //2-add the list item to the list
+     }
+       g.appendChild(t);
+
+
+       for (let n = 0; n < contact.length; n++) 
+    {
+       const i = document.createElement("li"); // create a new list element
+       (i.textContent = contact[n]), //1-set the text content of the list item to the contact
+       t.appendChild(i);  //2-add the list item to the list
+     }
+       h.appendChild(t);
+  }
+
+</script>
+
+    
+</body>
+</html>

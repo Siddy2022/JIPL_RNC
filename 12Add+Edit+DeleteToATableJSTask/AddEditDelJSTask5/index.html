@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>JSTask5</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="one">
+      <div class="container">
+        <div class="add">
+          <button class="collapsible">Add</button>
+
+          <div class="content">
+            <form id="myForm">
+              <br>
+              <input type="text" id="nameInput" placeholder="Enter Name" />
+              <input type="text" id="addressInput" placeholder="Enter Address" />
+              <input type="text" id="contactInput" placeholder="Enter Contact" />
+              <button type="button" onclick="Add()" id="addBtn">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="edit">
+        <button class="collapsible">Edit</button>
+
+        <div class="content">
+          <!-- <form id="myForm"> -->
+          <br>
+          <input type="text" id="slInput" placeholder="SL" />
+          <button type="button" onclick="show1()" class="showBtn">Show</button>
+          <input type="text" id="nameInput1" placeholder="Name" />
+          <input type="text" id="addressInput1" placeholder="Address" />
+          <input type="text" id="contactInput1" placeholder="Contact" />
+          <button type="button" onclick="Edit()">Edit</button>
+
+          <!-- </form> -->
+        </div>
+      </div>
+
+      <div class="delete">
+        <button class="collapsible">Delete</button>
+
+        <div class="content">
+          <!-- <form id="myForm"> -->
+          <br>
+          <input type="text" id="slInput1" placeholder="SL" size="5" />
+          <button type="button" onclick="show2()" class="showBtn">Show</button>
+          <input type="text" id="nameInput2" placeholder="Name" />
+          <input type="text" id="addressInput2" placeholder="Address" />
+          <input type="text" id="contactInput2" placeholder="Contact" />
+          <button type="button" onclick="Del()">Delete</button>
+
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="two">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+
+          </tr>
+        </thead>
+        <tbody id="dataBody">
+          <tr>
+            <td id="slno"></td>
+            <td id="name2"></td>
+            <td id="address1"></td>
+            <td id="contact1"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</body>
+<script src="script1.js"></script>
+
+</html>
