@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.collapsible {
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.collapsible:after {
+  content: '\25BC'; /* Down arrow */
+  float: right;
+}
+
+.collapsible.active:after {
+  content: '\25B2'; /* Up arrow */
+}
+
+.content {
+  display: none;
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+	</style>
+</head>
+<body>
+
+<div class="menu">
+  <button class="collapsible">Add</button>
+  <div class="content">
+    <h1>First Heading</h1>
+    <p>First Paragraph</p>
+  </div>
+  <br>
+  <br>
+  <button class="collapsible">Edit</button>
+  <div class="content">
+    <h1>Second Heading</h1>
+    <p>Second Paragraph</p>
+  </div>
+  <br>
+  <br>
+  <button class="collapsible">Delete</button>
+  <div class="content">
+    <h1>Third Heading</h1>
+    <p>Third Paragraph</p>
+  </div>
+</div>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+});
+
+</script>
+
+ 
+</body>
+</html>

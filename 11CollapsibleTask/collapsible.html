@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrink Div Task in Js</title>
+
+    <style>
+.panel {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.panel-heading {
+  background-color: #f0f0f0;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.panel-heading h3 {
+  margin: 0;
+}
+
+.panel-content {
+  padding: 10px;
+  display: none;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>   
+<div class="panel">
+  <div class="panel-heading" onclick="togglePanel(this)">
+    <h3>Add</h3>
+    <span class="toggle-icon">▲</span>
+  </div>
+  <div class="panel-content">
+    <p>Add content goes here...</p>
+  </div>
+</div>
+
+
+
+
+
+<script>
+function togglePanel(panelHeading) {
+  var panelContent = panelHeading.nextElementSibling;
+  var toggleIcon = panelHeading.querySelector('.toggle-icon');
+
+  if (panelContent.style.display === 'none') {
+    panelContent.style.display = 'block';
+    toggleIcon.textContent = '▲';
+  } else {
+    panelContent.style.display = 'none';
+    toggleIcon.textContent = '▼';
+  }
+}
+
+</script>
+</body>
+</html>
