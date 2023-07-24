@@ -29,8 +29,9 @@ Here I have listed few projects which I solely did in JIPL_RNC.
 3-HTML+CSS+JS+JSON+AJAX+JQUERY - 
 
                                  15- JSON Example
-                                 16- Gym Management System
-                                 17- Hostel Management System
+                                 16- Rework Projects
+                                 17- Gym Management System
+                                 18- Hostel Management System
 
 4-Reference Codes in HTML+CSS+JS - 
 
