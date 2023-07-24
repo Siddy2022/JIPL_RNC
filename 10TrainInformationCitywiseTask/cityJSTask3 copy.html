@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Train Information</title>
+    <style>
+      /* Add some basic styling for the dropdown list and button */
+      select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+      /* Add some styling for the list */
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      h2 {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Train Information</h1>
+    <label for="city-select">Select a city:</label>
+    <select id="city-select">
+      <option value="">Select a city</option>
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="kolkata">Kolkata</option>
+      <option value="chennai">Chennai</option>
+    </select>
+    <button onclick="showTrainDetails()">Show</button>
+    <h2>Train Details</h2>
+    <ul id="train-list"></ul>
+    <script>
+      const trains = {
+        delhi: [
+          { number: "12345", name: "Rajdhani Express", distance: 1200, fare: 1000 },
+          { number: "67890", name: "Duronto Express", distance: 1100, fare: 900 }
+        ],
+        mumbai: [
+          { number: "24680", name: "Shatabdi Express", distance: 1500, fare: 1200 },
+          { number: "13579", name: "Garib Rath Express", distance: 1400, fare: 1100 }
+        ],
+        kolkata: [
+          { number: "98765", name: "Howrah Express", distance: 800, fare: 800 },
+          { number: "43210", name: "Sealdah Express", distance: 700, fare: 700 }
+        ],
+        chennai: [
+          { number: "24601", name: "Chennai Express", distance: 1000, fare: 900 },
+          { number: "12346", name: "Pallavan Express", distance: 900, fare: 800 }
+        ]
+      }; // Initialize an object with train details for each city
+      function showTrainDetails() {
+        const select = document.getElementById("city-select"); // Get the dropdown list element
+        const city = select.value; // Get the selected city
+        if (city === "") {
+          alert("Please select a city!"); // Display an alert if no city is selected
+          return;
+        }
+        const trainsForCity = trains[city]; // Get the train details for the selected city
+        const trainList = document.getElementById("train-list"); // Get the list element
+        trainList.innerHTML = ""; // Clear the list
+        for (let i = 0; i < trainsForCity.length; i++) {
+          const train = trainsForCity[i];
+          const listItem = document.createElement("li"); // Create a new list item
+        }
+      }

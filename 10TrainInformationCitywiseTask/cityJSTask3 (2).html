@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Train Information</title>
+    <style>
+      /* Add some basic styling for the dropdown list and button */
+      select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+      /* Add some styling for the list */
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      h2 {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Train Information</h1>
+    <form onsubmit="handleSubmit(e)"></form>
+    <label for="city-select">Select a city:</label>
+    <select id="city-select">
+      <option value="">Select a city</option>
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="kolkata">Kolkata</option>
+      <option value="chennai">Chennai</option>
+    </select>
+    <button
+        style="
+          padding: 8px;
+          font-size: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: darksalmon;
+          color: #fff;
+          cursor: pointer;
+          margin-left: 10px;         
+        "
+        onclick="handleSubmit(event)"
+      >
+        Show
+      </button>
+    
+    <label for="trainName">Train Name:</label>
+      <input type="text" id="trainName" name="trainName" />
+
+      <br /><br />
+
+      <label for="trainNumber">Train Number:</label>
+      <input type="text" id="trainNumber" name="trainNumber" />
+
+      <br /><br />
+
+      <label for="distance">Distance:</label>
+      <input type="text" id="distance" name="distance" />
+
+      <br /><br />
+
+      <label for="fare">Fare Amount:</label>
+      <input type="text" id="fare" name="fare" />
+
+      <br /><br />
+    </form>
+    
+    
+    <script>
+      const trains = {
+        delhi: 
+          { 
+            trainNumber: "12345", 
+            trainName: "Rajdhani Express", 
+            distance: 1200, 
+            fare: 1000 
+          },
+          
+        
+        mumbai:
+          { 
+            trainNumber: "24680", 
+            trainName: "Shatabdi Express", 
+            distance: 1500, 
+            fare: 1200 
+          },
+        
+        kolkata:
+          { 
+            trainNumber: "98765", 
+            trainName: "Howrah Express", 
+            distance: 800, 
+            fare: 800 
+          },
+          
+        chennai: 
+          { 
+            trainNumber: "24601", 
+            trainName: "Chennai Express", 
+            distance: 1000, 
+            fare: 900 
+          },
+         
+      }; 
+
+      function handleSubmit(e){
+
+        e.preventDefault();
+        function populateFields(){
+          const city = document.getElementById("city").value;
+          const data = cityData[city];
+
+          if (data){
+           document.getElementById("trainName").value = data.trainName;
+           document.getElementById("trainNumber").value = data.trainNumber;
+           document.getElementById("distance").value = data.distance;
+           document.getElementById("fare").value = data.fare;
+
+
+          }
+        }
+        populateFields();
+
+      // // Initialize an object with train details for each city
+      // function showTrainDetails() 
+      // {
+      //   const select = document.getElementById("city-select"); // Get the dropdown list element
+        
+      //   const city = select.value; // Get the selected city
+        
+      //   if (city === "") {
+         
+      //     alert("Please select a city!"); // Display an alert if no city is selected
+      //     return;
+        
+      //   }
+      //   const trainsForCity = trains[city]; // Get the train details for the selected city
+        
+      //   const trainList = document.getElementById("train-list"); // Get the list element
+        
+      //   trainList.innerHTML = ""; // Clear the list
+        
+      //   for (let i = 0; i < trainsForCity.length; i++) {
+        
+      //     const train = trainsForCity[i];
+      //     const listItem = document.createElement("li"); // Create a new list item
+      //   }
+      // }
+    }

@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <title>Travel Info Form</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3.5rem;
+    "
+  >
+    <h1
+      style="border: 1px dashed darksalmon; padding: 10px; color: darkslategray"
+    >
+      Train Information Citywise
+    </h1>
+
+    <form onsubmit="handleSubmit(e)">
+      <label for="city">City:</label>
+      <select id="city" onchange="populateFields()">
+        <option value="">Select a city</option>
+          
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Mangalore">Mangalore</option>
+          <option value="Ranchi">Ranchi</option>
+          <option value="Bokaro">Bokaro</option>
+          <option value="Dhanbad">Dhanbad</option>
+          <option value="Jamshedpur">Jamshedpur</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Vijayawada">Vijayawada</option>
+          
+        
+        <!-- Add more options for other states in India -->
+      </select>
+      <button
+        style="
+          padding: 8px;
+          font-size: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: darksalmon;
+          color: #fff;
+          cursor: pointer;
+          margin-left: 10px;         
+        "
+        onclick="handleSubmit(event)"
+      >
+        Show
+      </button>
+      <!-- <input type="show" value="Show" /> -->
+
+      <br /><br />
+
+      <label for="trainName">Train Name:</label>
+      <input type="text" id="trainName" name="trainName" />
+
+      <br /><br />
+
+      <label for="trainNumber">Train Number:</label>
+      <input type="text" id="trainNumber" name="trainNumber" />
+
+      <br /><br />
+
+      <label for="distance">Distance:</label>
+      <input type="text" id="distance" name="distance"/>
+
+      <br /><br />
+
+      <label for="fare">Fare Amount:</label>
+      <input type="text" id="fare" name="fare"/>
+
+      <br /><br />
+    </form>
+
+    <script>
+      const cityData = {
+        Bengaluru: {
+          trainName: "Karnataka Express",
+          trainNumber: "12627",
+          distance: "350km",
+          fare: "Rs.500",
+        },
+        Chennai: {
+          trainName: "Chennai Express",
+          trainNumber: "12609",
+          distance: "690km",
+          fare: "Rs.600",
+        },
+        Coimbatore: {
+          trainName: "Kovai Express",
+          trainNumber: "12675",
+          distance: "508km",
+          fare: "Rs.450",
+        },
+        Mangalore: {
+          trainName: "Kannur Express",
+          trainNumber: "16527",
+          distance: "352km",
+          fare: "Rs.400",
+        },
+        Ranchi: {
+          trainName: "Jharkhand Express",
+          trainNumber: "12874",
+          distance: "800km",
+          fare: "Rs.1000",
+        },
+        Bokaro: {
+          trainName: "Bokaro Steel City - Howrah Express",
+          trainNumber: "18014",
+          distance: "600km",
+          fare: "Rs.1500",
+        },
+        Dhanbad: {
+          trainName: "Chambal Express",
+          trainNumber: "12178",
+          distance: "444km",
+          fare: "Rs.555",
+        },
+        Jamshedpur: {
+          trainName: "Steel Express",
+          trainNumber: "12814",
+          distance: "1000km",
+          fare: "Rs.1555",
+        },
+        Visakhapatnam: {
+          trainName: "East Coast Express",
+          trainNumber: "18645",
+          distance: "801km",
+          fare: "Rs.700",
+        },
+        Vijayawada: {
+          trainName: "Falaknuma Express",
+          trainNumber: "12703",
+          distance: "425km",
+          fare: "Rs.350",
+        }
+        
+        
+        // Add more city data as needed
+      };
+
+      function handleSubmit(e) {
+        e.preventDefault();
+        function populateFields() {
+          const city = document.getElementById("city").value;
+          const data = cityData[city];
+          if (data) {
+            document.getElementById("trainName").value = data.trainName;
+            document.getElementById("trainNumber").value = data.trainNumber;
+            document.getElementById("distance").value = data.distance;
+            document.getElementById("fare").value = data.fare;
+          }
+        }
+        populateFields();
+        // const city = document.getElementById("city").value;
+        // const data = cityData[city];
+        // if (data) {
+        //   alert(`Data populated for ${city}.`);
+        // } else {
+        //   alert(`No data found for ${city}.`);
+        // }
+      }
+    </script>
+  </body>
+</html>

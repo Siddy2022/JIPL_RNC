@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>City Train Information</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3.5rem;
+    "
+  >
+    <h1
+      style="border: 1px dashed darksalmon; padding: 10px; color: darkslategray"
+    >
+      Train Information
+    </h1>
+
+    <form>
+      <label for="city">City:</label>
+      <select id="city">
+        <option value="">Select a city</option>
+        <optgroup label="Andhra Pradesh">
+          <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Vijayawada">Vijayawada</option>
+        </optgroup>
+        <optgroup label="Karnataka">
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Mangalore">Mangalore</option>
+        </optgroup>
+        <optgroup label="Tamil Nadu">
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+        </optgroup>
+        <!-- Add more options for other states in India -->
+      </select>
+
+      <br /><br />
+
+      <label for="trainName">Train Name:</label>
+      <input type="text" id="trainName" name="trainName" />
+
+      <br /><br />
+
+      <label for="trainNumber">Train Number:</label>
+      <input type="text" id="trainNumber" name="trainNumber" />
+
+      <br /><br />
+
+      <label for="distance">Distance:</label>
+      <input type="text" id="distance" name="distance" />
+
+      <br /><br />
+
+      <label for="fare">Fare Amount:</label>
+      <input type="text" id="fare" name="fare" />
+
+      <br /><br />
+
+      <input type="button" value="Submit" onclick="createCard()" />
+    </form>
+
+    <div
+      style="display: flex; flex-direction: row; margin: 3rem"
+      id="cardContainer"
+    ></div>
+
+    <script>
+      function createCard() {
+        var city = document.getElementById("city").value;
+        var trainName = document.getElementById("trainName").value;
+        var trainNumber = document.getElementById("trainNumber").value;
+        var distance = document.getElementById("distance").value;
+        var fare = document.getElementById("fare").value;
+
+        var card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+        <h2>${city}</h2>
+        <p><strong>Train Name:</strong> ${trainName}</p>
+        <p><strong>Train Number:</strong> ${trainNumber}</p>
+        <p><strong>Distance:</strong> ${distance} km</p>
+        <p><strong>Fare Amount:</strong> Rs. ${fare}</p>
+      `;
+
+        document.getElementById("cardContainer").appendChild(card);
+      }
+    </script>
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        background-color: azure;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+    </style>
+  </body>
+</html>
