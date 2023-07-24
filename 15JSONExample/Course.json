@@ -1,0 +1,53 @@
+{
+  "Course": [
+    {
+      "courseID": "BCA",
+      "courseName": "Bachelor in Computer Application",
+      "courseFee": "18000",
+      "courseDuration": "3 YRS",
+      "id": 1
+    },
+    {
+      "courseID": "BSC IT",
+      "courseName": "Bachelor in Science (IT)",
+      "courseFee": "20000",
+      "courseDuration": "2 YRS",
+      "id": 3
+    },
+    {
+      "courseID": "MSC IT",
+      "courseName": "MSC IT",
+      "courseFee": "20000",
+      "courseDuration": "2 YRS",
+      "id": 4
+    },
+    {
+      "courseID": "MBA",
+      "courseName": "MBA",
+      "courseFee": "25000",
+      "courseDuration": "3 YRS",
+      "id": 5
+    },
+    {
+      "courseID": "MCA",
+      "courseName": "MASTER IN COMPUTER SCIENCE",
+      "courseFee": "20000",
+      "courseDuration": "3 YRS",
+      "id": 6
+    },
+    {
+      "courseID": "BBA",
+      "courseName": "BBA",
+      "courseFee": "18000",
+      "courseDuration": "2 YRS",
+      "id": 7
+    },
+    {
+      "courseID": "8",
+      "courseName": "BCOM",
+      "courseFee": "10000",
+      "courseDuration": "1YR",
+      "id": 8
+    }
+  ]
+}
