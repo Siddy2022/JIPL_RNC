@@ -1,0 +1,45 @@
+.one {
+  width: 100%;
+  display: flex;
+}
+
+.addBtn{
+    float: left;
+    
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #0096ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0096ff;
+}
+
+table {
+  width: 99%;
+  border-collapse: collapse;
+  float: right;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #0096ff;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
