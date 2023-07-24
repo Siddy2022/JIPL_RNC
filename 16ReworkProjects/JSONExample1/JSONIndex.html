@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
+
+</head>
+
+<body onload="showData(); LoadSlide();">
+    <div class="SidePannel">
+        <h1>Main Menu</h1>
+
+        <!-- Add New Course -->
+        <div class="SideBoxHeader" onclick="$('#SideBox1').slideToggle();">Add New Course </div>
+        <div class="SideBox" id="SideBox1">
+            <p>Course ID</p>
+            <input type="text" id="courseID">
+            <p>Course Name</p>
+            <input type="text" id="courseName">
+            <p>Fee</p>
+            <input type="text" id="courseFee">
+            <p>Duration</p>
+            <input type="text" id="duration">
+            <button id="btnCourseAdd" onclick="addCourse()">Save</button>
+        </div>
+
+        <!-- Edit Course -->
+        <div class="SideBoxHeader" onclick="$('#SideBox2').slideToggle();">Edit Course</div>
+        <div class="SideBoxEdit" id="SideBox2">
+            <p>Enter SL ID</p>
+            <input type="text" id="slIDEdit"><button onclick="showEditData()">Show Data</button>
+            <p>Course ID</p>
+            <input type="text" id="EditID">
+            <p>Course Name</p>
+            <input type="text" id="EditName">
+            <p>Fee</p>
+            <input type="text" id="EditFee">
+            <p>Duration</p>
+            <input type="text" id="Editduration">
+            <button id="btnCourseAdd" onclick="EditData()">Save</button>
+        </div>
+
+
+        <!-- Delete Course -->
+        <div class="SideBoxHeader"  onclick="$('#SideBox3').slideToggle();">Delete Course</div>
+        <div class="SideBoxEdit" id="SideBox3">
+            <p>Enter SL ID</p>
+            <input type="text" id="slIDDelete"><button onclick="showDeleteData()">Show Data</button>
+            <p>Course ID</p>
+            <input type="text" id="DeleteID">
+            <p>Course Name</p>
+            <input type="text" id="DeleteName">
+            <p>Fee</p>
+            <input type="text" id="DeleteFee">
+            <p>Duration</p>
+            <input type="text" id="Deleteduration">
+            <button id="btnCourseDelete" onclick="DeleteCourse()">Delete Course</button>
+        </div>
+    </div>
+    <div class="MainPannel">
+        <h1>Course Details</h1>
+       <button onclick="showData()">Refresh</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>SL ID</th>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Fee</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody id="tblBody">
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<script>
+   
+</script>
+
+</html>
