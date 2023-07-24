@@ -1,0 +1,77 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.AddNewBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px;
+}
+
+.popupdiv {
+  display: none;
+  background-color: #add8e6;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  border-radius: 4px;
+}
+
+.popupdiv h2 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.popupdiv label {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.popupdiv input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.btndiv {
+  margin-left: 15px;
+}
+
+.popupdiv button {
+  margin-top: 7px;
+  padding: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.studenttable {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.studenttable th,
+.studenttable td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  width: 20%;
+}
+.studenttable thead {
+  background-color: yellow;
+}
+
+span {
+  text-decoration: underline;
+  cursor: pointer;
+}
