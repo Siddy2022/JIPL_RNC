@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button class="AddNewBtn" onclick="ShowPopUp()">Add New</button>
+
+  <div class="popupdiv" id="popup">
+    <h2>Contact Details</h2>
+
+    <label>Name :</label>
+    <input type="text" placeholder="Enter Name" id="name">
+
+    <label>Address :</label>
+    <input type="text" placeholder="Enter Address" id="address">
+
+    <label>Contact :</label>
+    <input type="text" placeholder="Enter Contact" id="contact">
+
+    <div class="btndiv">
+      <button onclick="onSubmit()">Submit</button>
+      <button onclick="onClose()">Close</button>
+    </div>
+
+  </div>
+
+  <div class="popupdiv" id="popup2">
+    <h2>Contact Details</h2>
+
+    <label>Name :</label>
+    <input type="text" placeholder="Enter Name" id="name2">
+
+    <label>Address :</label>
+    <input type="text" placeholder="Enter Address" id="address2">
+
+    <label>Contact :</label>
+    <input type="text" placeholder="Enter Contact" id="contact2">
+
+    <div class="btndiv">
+      <button onclick="onUpdate()">Update</button>
+      <button onclick="onUpdateClose()">Close</button>
+    </div>
+
+  </div>
+
+  <table class="studenttable">
+    <thead>
+      <tr>
+        <th>Sl No</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td id="display1"></td>
+        <td id="display2"></td>
+        <td id="display3"></td>
+        <td id="display4"></td>
+        <td id="display5"></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
