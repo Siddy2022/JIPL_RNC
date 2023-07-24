@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adding Names to an Array</title>
+    <style>
+      
+      /* Added some basic styling for the input box and button */
+      input[type=text] {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 8px;
+      }
+      
+      button {
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #808080;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      /* Added some styling for the list of names */
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      li {
+        margin: 4px 0;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Adding Names to an Array and Displaying it</h1>
+    <label for="Name">Name:</label>
+    <input type="text" id="name-input" placeholder="Enter a name" />
+    
+    <button onclick="addName()">Add</button>
+    
+    <ul id="name-list"></ul>
+    
+    <script>
+      
+      let names = []; // Initialize an empty array to store the names
+      
+      function addName() {
+       
+        const input = document.getElementById("name-input"); // Get the input box element
+       
+        const name = input.value; // Get the value of the input box
+       
+        names.push(name); // Add the name to the array
+       
+        input.value = ""; // Clear the input box
+       
+        displayNames(); // Update the list of names
+      }
+      
+      function displayNames() {
+      
+        const list = document.getElementById("name-list"); // Get the list element
+      
+        list.innerHTML = ""; // Clear the list
+      
+        for (let i = 0; i < names.length; i++) {
+      
+          const li = document.createElement("li"); // Create a new list item element
+      
+          li.textContent = names[i]; // Set the text content of the list item to the name
+      
+          list.appendChild(li); // Add the list item to the list
+        }
+      }
+    </script>
+  </body>
+</html>

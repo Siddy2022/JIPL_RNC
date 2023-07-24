@@ -1,0 +1,56 @@
+<html>
+    <head>
+    <title>Film info</title>
+
+    </head>
+        <body>
+            <script>
+                function insert(){
+   
+    var actorValue = document.getElementById('name').value;
+
+    
+    names[names.length]=actorValue;
+    
+  }
+
+function show() {
+  var content="<b>All Elements of the Arrays :</b><br>";
+  
+  for(var i = 0; i < names.length; i++) {
+     content +=names[i]+"<br>";
+  }
+  
+  document.getElementById('display').innerHTML = content;
+}
+
+            </script>
+
+
+        <form id="form">
+
+            <h1><b>Please enter data</b></h1>
+        <hr size="3"/>
+        <br>
+
+        <br>
+
+            <label for="name">Name</label><input id="name" type="text" />
+        <br>
+
+            
+        <br>
+
+            <input type="button" value="Save" onclick="insert();">
+            <input type="button" value="Show data" onclick="show();"> <br>
+
+            <h2><b>Data:</b></h2>
+        <hr>
+        </form>
+
+        <div id="display">
+
+            </div>
+        </body>
+
+</html>
