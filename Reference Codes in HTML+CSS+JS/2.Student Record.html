@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .first {
+            background-color: #f2d9b4;
+            width: 25%;
+            padding: 10px;
+            border-radius: 8px;
+            float: left;
+        }
+
+        .student {
+            background-color: blue;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-top: 7px;
+            padding: 10px;
+            text-align: center;
+            background-color: #8b8383;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            font-weight: bold;
+        }
+
+        /* Second Div For Student Details */
+
+        .second {
+            width: 75%;
+            background-color: #f2d9b4;
+            padding: 13px;
+            float: left;
+            display: inline;
+            position: absolute;
+            border-radius: 8px;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 50%;
+            padding: 10px;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div class="student">Student Name</div>
+        <div>
+            <ul>
+                <li onclick="myFun1()">Amit Kumar</li>
+                <li onclick="myFun2()">Rajiv Kumar</li>
+                <li onclick="myFun3()">Ajit Kumar</li>
+                <li onclick="myFun4()">Ranjit Kumar</li>
+                <li onclick="myFun5()">Abhishek Kumar</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="second">
+        <div class="student">Student Details</div>
+        <div>
+            <table>
+                <tr>
+                    <td>Enrollment :</td>
+                    <td id="a">2022005</td>
+                </tr>
+
+                <tr>
+                    <td>Name :</td>
+                    <td id="b">Amit Kumar</td>
+                </tr>
+
+                <tr>
+                    <td>Father Name :</td>
+                    <td id="c">Mr.Avinash Pandey</td>
+                </tr>
+
+                <tr>
+                    <td>Course :</td>
+                    <td id="d">BCA</td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth :</td>
+                    <td id="e">18 May 1990</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function myFun1(){
+            document.getElementById("a").innerHTML="2022005";
+            document.getElementById("b").innerHTML="Amit Kumar";
+            document.getElementById("c").innerHTML="Mr.Avinash Pandey";
+            document.getElementById("d").innerHTML="BCA";
+            document.getElementById("e").innerHTML="18 May 1990";
+        }
+
+        function myFun2(){
+            document.getElementById("a").innerHTML="2022010";
+            document.getElementById("b").innerHTML="Rajiv Kumar";
+            document.getElementById("c").innerHTML="Mr.Sambit Maharana";
+            document.getElementById("d").innerHTML="BCA";
+            document.getElementById("e").innerHTML="08 November 1989";
+        }
+
+        function myFun3(){
+            document.getElementById("a").innerHTML="2022010";
+            document.getElementById("b").innerHTML="Rajiv Kumar";
+            document.getElementById("c").innerHTML="Mr.Rajat Patel";
+            document.getElementById("d").innerHTML="BCA";
+            document.getElementById("e").innerHTML="14 April 1992";
+        }
+
+        function myFun4(){
+            document.getElementById("a").innerHTML="2022010";
+            document.getElementById("b").innerHTML="Rajiv Kumar";
+            document.getElementById("c").innerHTML="Mr.Nihar Patidar";
+            document.getElementById("d").innerHTML="MCA";
+            document.getElementById("e").innerHTML="10 June 1999";
+        }
+
+        function myFun5(){
+            document.getElementById("a").innerHTML="2022010";
+            document.getElementById("b").innerHTML="Rajiv Kumar";
+            document.getElementById("c").innerHTML="Mr.Sanjay Kheti";
+            document.getElementById("d").innerHTML="BBA";
+            document.getElementById("e").innerHTML="25 March 1998";
+        }
+    </script>
+</body>
+
+</html>

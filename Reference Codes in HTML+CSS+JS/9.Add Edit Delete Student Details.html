@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="first clearfix">
+        <div class="one">Main Menu</div>
+        <hr>
+
+        <div class="header clearfix">Add Data
+            <div class="up" onclick="myFun1()">▲</div>
+            <div class="up" onclick="myFun2()">▼</div>
+        </div>
+
+        <div class="form clearfix" id="add">
+            <label>Sl No :</label><br>
+            <input type="text" id="demo1"><br>
+
+            <label>Student Name :</label><br>
+            <input type="text" id="demo2"><br>
+
+            <label>Father's Name :</label><br>
+            <input type="text" id="demo3"><br>
+
+            <label>Course :</label><br>
+            <input type="text" id="demo4"><br>
+
+            <button onclick="Add()">Add New</button>
+
+        </div>
+
+
+        <div class="header clearfix">Edit Data
+            <div class="up" onclick="myFun3()">▲</div>
+            <div class="up" onclick="myFun4()">▼</div>
+        </div>
+
+        <div class="form clearfix" id="edit">
+            <label>Sl No :</label><br>
+            <input type="text" class="show" id="show1">
+            <button class="btnshow" onclick="Show1();">Show</button><br><br>
+
+            <label>Student Name :</label><br>
+            <input type="text" id="show2"><br>
+
+            <label>Father's Name :</label><br>
+            <input type="text" id="show3"><br>
+
+            <label>Course :</label><br>
+            <input type="text" id="show4"><br>
+
+            <button onclick="Edit()">Edit Data</button>
+
+        </div>
+
+
+
+        <div class="header clearfix">Delete Data
+            <div class="up" onclick="myFun5()">▲</div>
+            <div class="up" onclick="myFun6()">▼</div>
+        </div>
+
+        <div class="form clearfix" id="delete">
+            <label>Sl No :</label><br>
+            <input type="text" class="show" id="delete1">
+            <button class="btnshow" onclick="Show2()">Show</button><br><br>
+
+            <label>Student Name :</label><br>
+            <input type="text" id="delete2"><br>
+
+            <label>Father's Name :</label><br>
+            <input type="text" id="delete3"><br>
+
+            <label>Course :</label><br>
+            <input type="text" id="delete4"><br>
+
+            <button onclick="Del()">Delete</button>
+
+        </div>
+    </div>
+
+    <div class="second clearfix">
+        <div class="one">Student Details</div>
+        <hr>
+        <div class="result clearfix">
+            
+            <div class="slno">SL No</div>
+            <div class="slno">Student Name</div>
+            <div class="slno">Father Name</div>
+            <div class="slno">Course</div>
+            
+            <div class="nav clearfix">
+            <div class="serialno" id="display1"></div>
+            <div class="serialno" id="display2"></div>
+            <div class="serialno" id="display3"></div>
+            <div class="serialno" id="display4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="externaljs9.js"></script>
+</body>
+
+</html>

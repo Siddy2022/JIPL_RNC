@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .first {
+            background-color: bisque;
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+        }
+
+        .header {
+            width: 100%;
+            margin: auto;
+            background-color: blue;
+            padding: 5px;
+            font-size: 25px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .up {
+            cursor: pointer;
+            background-color: #3aa33a;
+            float: right;
+            margin-left: 5px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .details {
+            background-color: #96eb15;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .td {
+            border: 1px solid black;
+        }
+
+        .data {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            border-radius: px;
+        }
+
+        .container {
+            margin-top: 5px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Responsive Codes */
+
+        @media screen and (max-width :900px) {
+            .first {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first clearfix">
+        <div>
+            <div class="header clearfix">
+                Student Details
+                <div class="up" onclick="myFun1()">▲</div>
+                <div class="up" onclick="myFun2()">▼</div>
+            </div>
+
+            <div class="details clearfix" id="demo1">
+                <div class="td data">Name</div>
+                <div class="td data">Amit Kumar</div>
+                <div class="td data">Roll No</div>
+                <div class="td data">254</div>
+                <div class="td data">Section</div>
+                <div class="td data">A</div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header clearfix">
+                Course Details
+                <div class="up" onclick="myFun3()">▲</div>
+                <div class="up" onclick="myFun4()">▼</div>
+            </div>
+
+            <div class="details clearfix" id="demo2">
+                <div class="td data">Code</div>
+                <div class="td data">1230</div>
+                <div class="td data">Course Name</div>
+                <div class="td data">BCA</div>
+                <div class="td data">Duration</div>
+                <div class="td data">3 Years</div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header clearfix">
+                Faculty Details
+                <div class="up" onclick="myFun5()">▲</div>
+                <div class="up" onclick="myFun6()">▼</div>
+            </div>
+
+            <div class="details clearfix" id="demo3">
+                <div class="td data">Name</div>
+                <div class="td data">Om Sir</div>
+                <div class="td data">Desigation</div>
+                <div class="td data">Professor</div>
+                <div class="td data">Subject</div>
+                <div class="td data">JavaScript</div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function myFun1() {
+            document.getElementById("demo1").style.display = "none";
+        }
+
+        function myFun2() {
+            document.getElementById("demo1").style.display = "block";
+        }
+
+
+        function myFun3() {
+            document.getElementById("demo2").style.display = "none";
+        }
+
+        function myFun4() {
+            document.getElementById("demo2").style.display = "block";
+        }
+
+
+        function myFun5() {
+            document.getElementById("demo3").style.display = "none";
+        }
+
+        function myFun6() {
+            document.getElementById("demo3").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

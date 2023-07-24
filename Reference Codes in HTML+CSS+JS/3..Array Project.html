@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main {
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 8px;
+            height: 160px;
+        }
+
+        .first {
+            width: 25%;
+            float: left;
+            display: inline;
+        }
+
+        .menu {
+            background-color: blue;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            padding: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-top: 10px;
+            background-color: #8fbde4;
+            padding: 6px;
+            text-align: center;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .second {
+            width: 75%;
+            float: left;
+        }
+
+        .student {
+            padding: 5px;
+            font-size: 25px;
+        }
+
+        hr {
+            background-color: blue;
+        }
+
+        .name {
+            padding: 10px;
+            background-color: gold;
+            border-radius: 10px;
+            line-height: 22px;
+            font-weight: bold;
+        }
+
+        /* Responsive Code */
+
+        @media screen and (max-width :900px) {
+            .first {
+                width: 100%;
+            }
+
+            .second {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="first">
+            <div class="menu">Main Menu</div>
+            <div>
+                <ul>
+                    <li onclick="myFun1()">Student Name</li>
+                    <li onclick="myFun2()">Course Name</li>
+                    <li onclick="myFun3()">Faculty Name</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="second">
+            <div class="student">Student Name</div>
+            <hr>
+
+            <div class="name">
+                <p id="demo"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFun1() {
+            const student = ["Amit Kumar", "Ranjit Kumar", "Ajit Kumar", "Rakesh Kumar", "Pramod Kumar", "Abhijit Kumar"];
+
+            let text = "";
+            for (let i = 0; i < student.length; i++) {
+                text += student[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+
+        function myFun2() {
+            const course = ["BCA", "BBA", "MCA", "MBA", "BSC", "BED"];
+
+            let text = "";
+            for (let i = 0; i < 5; i++) {
+                text += course[i] + "<br>";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        }
+
+        function myFun3() {
+            const faculty = ["Shankar Sir", "Babula Sir", "Lalan Sir", "Birendra Sir", " Sir", " Sir"];
+
+            let text = "";
+            for (let i = 0; i < faculty.length; i++) {
+                text += faculty[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

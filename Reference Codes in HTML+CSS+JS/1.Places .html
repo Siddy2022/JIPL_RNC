@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main {
+            width: 100%;
+        }
+
+        .places {
+            width: 20%;
+            float: left;
+            background-color: blue;
+            border-radius: 12px;
+        }
+
+        .images {
+            width: 100%;
+            height: auto;
+            /* background-color: orange; */
+        }
+
+        .img1 {
+            width: 80%;
+            height: 350px;
+            margin: 8px;
+            padding: 10px;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+
+        .main .places ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main .places ul li {
+            background-color: #dfcfcf;
+            margin: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width : 900px) {
+            .places {
+                width: 100%;
+            }
+
+            .images {
+                width: 90%;
+                margin-left: -1%;
+            }
+
+            .img1 {
+                text-align: center;
+                height: 280px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="places">
+            <ul>
+                <li onclick="myFun1()">Bhubaneswar</li>
+                <li onclick="myFun2()">Puri</li>
+                <li onclick="myFun3()">Cuttack</li>
+                <li onclick="myFun4()">Sambalpur</li>
+                <li onclick="myFun5()">Rourkela</li>
+                <li onclick="myFun6()">Baleswar</li>
+                <li onclick="myFun7()">Bhadrak</li>
+            </ul>
+        </div>
+
+        <div class="images">
+            <img class="img1" id="click1" src="Bhubaneswar.jpg">
+        </div>
+    </div>
+
+    <script>
+        function myFun1() {
+            document.getElementById("click1").src = "Bhubaneswar.jpg";
+        }
+
+        function myFun2() {
+            document.getElementById("click1").src = "Puri.jpg";
+        }
+
+        function myFun3() {
+            document.getElementById("click1").src = "Cuttack.jpg";
+        }
+
+        function myFun4() {
+            document.getElementById("click1").src = "Sambalpur.jpg";
+        }
+
+        function myFun5() {
+            document.getElementById("click1").src = "Rourkela.jpg";
+        }
+
+        function myFun6() {
+            document.getElementById("click1").src = "Baleswar.jpg";
+        }
+
+        function myFun7() {
+            document.getElementById("click1").src = "Bhadrak.jpg";
+        }
+    </script>
+</body>
+
+</html>

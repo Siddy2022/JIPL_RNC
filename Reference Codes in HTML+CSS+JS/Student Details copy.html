@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .first {
+            background-color: aqua;
+            width: 25%;
+            float: left;
+            padding: 10px;
+        }
+
+        .student {
+            background-color: blue;
+            padding: 8px;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        a {
+            cursor: pointer;
+            padding: 11.5px;
+            display: block;
+        }
+
+        .second {
+            background-color: bisque;
+            width: 75%;
+            padding: 10px;
+            float: left;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 50%;
+            padding: 8px;
+        }
+
+        a:hover {
+            font-weight: bold;
+            color: rebeccapurple;
+        }
+
+        .now{
+            width: 40%;
+            text-align: center;
+            margin: auto;
+        }
+
+        /* Responsive Code */
+
+        @media screen and (max-width:900px) {
+            .first {
+                width: 100%;
+                text-align: center;
+            }
+
+            .second {
+                width: 100%;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            .now{
+            width: 20%;
+            text-align: center;
+            margin: auto;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="first">
+        <div class="student">Student Details</div>
+
+        <div class="now">
+        <a id="name1" onclick="myFun1(name1.text)">Amit Kumar</a>
+        <a id="name2" onclick="myFun1(name2.text)">Ranjit Kumar</a>
+        <a id="name3" onclick="myFun1(name3.text)">Ajit Kumar</a>
+        <a id="name4" onclick="myFun1(name4.text)">Rakesh Kumar</a>
+        <a id="name5" onclick="myFun1(name5.text)">Pramod Kumar</a>
+        <a id="name6" onclick="myFun1(name6.text)">Abhijit Kumar</a>
+        </div>
+
+    </div>
+
+    <div class="second">
+        <div class="student">Personal Information</div>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td id="demo1"></td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td id="demo2"></td>
+            </tr>
+
+            <tr>
+                <td>Contact</td>
+                <td id="demo3"></td>
+            </tr>
+
+            <tr>
+                <td>Subject</td>
+                <td id="demo4"></td>
+            </tr>
+
+            <tr>
+                <td>Course</td>
+                <td id="demo5"></td>
+            </tr>
+
+            <tr>
+                <td>Father's Name</td>
+                <td id="demo6"></td>
+            </tr>
+
+            <tr>
+                <td>DOB</td>
+                <td id="demo7"></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        const student=["Amit Kumar", "Ranjit Kumar", "Ajit Kumar", "Rakesh Kumar", "Pramod Kumar", "Abhijit Kumar"];
+
+        const address=["Ranchi", "Dhanbad", "Kolkata", "Hatia", "Jamshedpur", "Bhubaneswar"];
+
+        const contact=[1203547895, 1450368754, 2578965472, 14587962502, 5402300258, 1597532486];
+
+        const subject=["HTML", "CSS", "JavaScript", "React", "Angular", "PHP"];
+
+        const course=["BCA", "MCA", "MBA", "MBA", "BSC", "PHD"];
+
+        const father=["Mahesh", "Subham", "Manoj", "Munna", "Niraj", "Prahalad"];
+
+        const dob=["15March 1987", "30 May 1995", "15 April 1990", "27 Feb 2000", "18 March 2002", "12 June 2011"];
+
+        function myFun1(txt){
+            let index = student.indexOf(txt);
+            document.getElementById("demo1").innerHTML = student[index];
+            document.getElementById("demo2").innerHTML = address[index];
+            document.getElementById("demo3").innerHTML = contact[index];
+            document.getElementById("demo4").innerHTML = subject[index];
+            document.getElementById("demo5").innerHTML = course[index];
+            document.getElementById("demo6").innerHTML = father[index];
+            document.getElementById("demo7").innerHTML = dob[index];
+        }
+
+    </script>
+</body>
+
+</html>
