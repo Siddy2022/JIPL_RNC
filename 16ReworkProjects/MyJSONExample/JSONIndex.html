@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js"></script>
+
+</head>
+
+<body onload="showData(); LoadSlide();">
+    <div class="SidePannel">
+        <h1>Main Menu</h1>
+
+        <!-- Add New Course -->
+        <div class="SideBoxHeader" onclick="$('#SideBox1').slideToggle();">Add New Contact </div>
+        <div class="SideBox" id="SideBox1">
+            <p>Contact ID</p>
+            <input type="text" id="contactID">
+            <p>Contact Name</p>
+            <input type="text" id="contactName">
+            <p>Age</p>
+            <input type="text" id="contactAge">
+            <p>Address</p>
+            <input type="text" id="address">
+            <button id="btnCourseAdd" onclick="addContact()">Save</button>
+        </div>
+
+        <!-- Edit Course -->
+        <div class="SideBoxHeader" onclick="$('#SideBox2').slideToggle();">Edit Contact</div>
+        <div class="SideBoxEdit" id="SideBox2">
+            <p>Enter SL ID</p>
+            <input type="text" id="slIDEdit"><button onclick="showEditData()">Show Data</button>
+            <p>Contact ID</p>
+            <input type="text" id="EditID">
+            <p>Contact Name</p>
+            <input type="text" id="EditName">
+            <p>Age</p>
+            <input type="text" id="EditAge">
+            <p>Address</p>
+            <input type="text" id="Editaddress">
+            <button id="btnCourseAdd" onclick="EditData()">Save</button>
+        </div>
+
+
+        <!-- Delete Course -->
+        <div class="SideBoxHeader"  onclick="$('#SideBox3').slideToggle();">Delete Contact</div>
+        <div class="SideBoxEdit" id="SideBox3">
+            <p>Enter SL ID</p>
+            <input type="text" id="slIDDelete"><button onclick="showDeleteData()">Show Data</button>
+            <p>Contact ID</p>
+            <input type="text" id="DeleteID">
+            <p>Course Name</p>
+            <input type="text" id="DeleteName">
+            <p>Age</p>
+            <input type="text" id="DeleteAge">
+            <p>Address</p>
+            <input type="text" id="Deleteaddress">
+            <button id="btnContactDelete" onclick="DeleteContact()">Delete Contact</button>
+        </div>
+    </div>
+    <div class="MainPannel">
+        <h1>Contact Details</h1>
+       <button onclick="showData()">Refresh</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>SL ID</th>
+                    <th>Contact ID</th>
+                    <th>Contact Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody id="tblBody">
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<script>
+   
+</script>
+
+</html>
